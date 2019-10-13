@@ -8,6 +8,7 @@ public class Custom {
 		this.id = s2;
 		this.telnum = s3;
 		
+		
 	}
 	public String getName() {
 		return name;
@@ -29,6 +30,6 @@ public class Custom {
 	}
 	public void buySomthing(Product s1) {
 		s1.displayInof();
-		System.out.println("购物已经完成！！！！！");
+		System.out.println("购物已经完成！！");
 	}
 }
