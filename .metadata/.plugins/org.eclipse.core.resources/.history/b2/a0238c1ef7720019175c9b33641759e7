@@ -1,0 +1,45 @@
+package eg;
+
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+import util.MyTool;
+
+public class EX4_1 {
+
+	public static void main(String[] args) {
+		JFrame frame = new JFrame("Change");
+		JPanel panel = new JPanel();
+		JButton but = new JButton("exchange");
+		JTextField jtxt1 = new JTextField(10);
+		JTextField jtxt2 = new JTextField(10);
+		jtxt1.setBackground(Color.GRAY);
+		jtxt2.setBackground(Color.GRAY);
+		MyTool.initFrame(frame, 350, 70);
+		but.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String temp = jtxt1.getText();
+				jtxt1.setText(jtxt2.getText());
+				jtxt2.setText(temp);
+				
+			}
+		});
+		panel.add(jtxt1);
+		panel.add(jtxt2);
+		panel.add(but);
+		frame.add(panel);
+	}
+	public static void initTxt(){
+		
+	}
+	
+
+}

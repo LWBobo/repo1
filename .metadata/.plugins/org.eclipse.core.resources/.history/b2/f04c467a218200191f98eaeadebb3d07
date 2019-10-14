@@ -1,0 +1,34 @@
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Timestamp;
+
+import util.JDBCutil;
+
+public class Experiment5 {
+	private static  Connection conn = null;
+	public static PreparedStatement ps = null;
+	
+
+	public Experiment5(Connection conn) {
+		Experiment5.conn = conn;
+	}
+
+
+	public static void add(Student stu) {
+		try {
+			String sql = "insert into stu (id,name,age,sex,logintime) values (?,?,?,?,?)";
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, stu.getID());
+			ps.setString(2, stu.getName());
+			ps.setInt(3, stu.getAge());
+			ps.setObject(4, stu.getSex()+"");
+			Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+			ps.setTimestamp(5,timestamp);
+			ps.execute();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+}

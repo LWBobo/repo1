@@ -1,0 +1,40 @@
+package dao;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.TreeSet;
+
+import entity.Score;
+import entity.Student;
+
+public class DataKit {
+
+	public static Set<Student> selectstu(ArrayList<Student> stuarr) {
+			Score score = new Score();
+			Scanner input = new Scanner(System.in);
+			Comparator<Student> com = new Comparator<Student>() {
+				
+				@Override
+				public int compare(Student o1, Student o2) {
+					int num = o1.getScore().getTotalscores() > o2.getScore().getTotalscores() ? 1:(o1.getScore().getTotalscores() == o2.getScore().getTotalscores()? 0:-1);
+					return num;
+				}
+			};
+			Set<Student> stuset = new TreeSet<Student>(com);
+			System.out.println("请输入总分数线：");
+			int line = input.nextInt();
+			score.setTotalscoresline(line);
+			for (int i = 0; i < stuarr.size(); i++) {
+				if(stuarr.get(i).getScore().getTotalscores() > score.getTotalscoresline()) {
+					stuset.add(stuarr.get(i));
+				}
+			}
+			
+			return stuset;			
+			
+	}
+
+	
+}

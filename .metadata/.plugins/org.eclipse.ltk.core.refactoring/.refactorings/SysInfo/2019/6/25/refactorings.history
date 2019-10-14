@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;sigar-loader-1.6.5.jar&apos; to &apos;SysInfo/src/lib&apos;&#x0D;&#x0A;- Original project: &apos;SysInfo&apos;&#x0D;&#x0A;- Destination element: &apos;SysInfo/src/lib&apos;&#x0D;&#x0A;- Original element: &apos;sigar-loader-1.6.5.jar&apos;" description="Copy file" destination="/src&lt;lib" element1="sigar-loader-1.6.5.jar" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1560781901909" units="0" version="1.0"/>
+</session>

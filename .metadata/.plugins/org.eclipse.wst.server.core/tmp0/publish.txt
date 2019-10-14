@@ -1,0 +1,3 @@
+#Tomcat publish data
+#Mon Sep 23 17:12:57 CST 2019
+org.eclipse.jst.jee.server\:/binary\:G\:\\SoftWaerTest\\\u6E90\u7A0B\u5E8F\\shang\\WebContent\\WEB-INF\\lib\\spring-web-5.0.2.RELEASE.jar=WEB-INF/lib/spring-web-5.0.2.RELEASE.jar
