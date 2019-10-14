@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;MyJDBC/src/db.propertise&apos; to &apos;db.properties&apos;" description="Rename resource &apos;db.propertise&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/db.propertise" name="db.properties" stamp="1559136454910" updateReferences="true"/>
-</session>
